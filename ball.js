@@ -33,14 +33,11 @@ export default class Ball {     // making a Ball class to be used in game
     set y(value) {
         this.ballElam.style.setProperty("--y", value);
     }
-
     
-    
-    update(delta) {
-        this.x += this.direction.x * initialVelocity * delta;
-        this.y += this.direction.y * initialVelocity * delta;
+    reflect() {
+        return this.ballElam.getBoundingClientRect();
     }
-
+    
     reset() {
         this.x = 50;
         this.y = 50;
@@ -52,6 +49,22 @@ export default class Ball {     // making a Ball class to be used in game
         // console.log(this.direction);
         this.velocity = initialVelocity
     }
+    
+    update(delta, paddleArea) {
+        this.x += this.direction.x * initialVelocity * delta;
+        this.y += this.direction.y * initialVelocity * delta;
+        this.velocity += 0.00001 * delta
+        let reflect = this.reflect()
+
+        if (reflect.bottom >= window.innerHeight || reflect.top <= 0){
+            this.direction.y *= -1
+        }
+        if(paddleArea.some(r => collide(r, reflect))){
+            this.direction.x *= -1
+        }
+    }
+
+
 }
 
 function getRandomNumberbw(min, max) {
@@ -60,4 +73,11 @@ function getRandomNumberbw(min, max) {
     return randomNum;
 }
 
-let initialVelocity = 0.02
+let initialVelocity = 0.03
+
+function collide(area1, area2) {
+    return (area1.left <= area2.right && 
+    area1.right >= area2.left && 
+    area1.top <= area2.bottom && 
+    area1.bottom >= area2.top)
+}
