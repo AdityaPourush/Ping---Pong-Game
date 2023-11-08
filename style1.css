@@ -1,59 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Keania+One&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     --hue: 275;
     --background-color: hsl(var(--hue), 60%, 25%);
 }
 
-body{
+body {
     background-color: var(--background-color);
 }
 
 
-    /* other color scheme body{
-        width: 100vw;
-        height: 100vh;
-        animation: changeBg 10s linear infinite;
+/* other color scheme body{
+    width: 100vw;
+    height: 100vh;
+    animation: changeBg 10s linear infinite;
+}
+
+@keyframes changeBg{
+    0% {
+        background-color: hsl(275, 59%, 25%);
+    }
+    20% {
+        background-color: #9c27b0;
+    }
+    40%{
+        background-color: #009688;
+    }
+    60% {
+        background-color: #2196f3;
+    }
+    80% {
+        background-color: #ff5722;
+    }
+    90% {
+        background-color: yellowgreen;
+    }
+    95%{
+        background-color: #9c27b0;
+    }
+    100%{
+        background-color: hsl(275, 59%, 25%)
     }
 
-    @keyframes changeBg{
-        0% {
-            background-color: hsl(275, 59%, 25%);
-        }
-        20% {
-            background-color: #9c27b0;
-        }
-        40%{
-            background-color: #009688;
-        }
-        60% {
-            background-color: #2196f3;
-        }
-        80% {
-            background-color: #ff5722;
-        }
-        90% {
-            background-color: yellowgreen;
-        }
-        95%{
-            background-color: #9c27b0;
-        }
-        100%{
-            background-color: hsl(275, 59%, 25%)
-        }
+} */
 
-    } */
-
-h1{
+h1 {
     font-family: 'Kaushan Script', cursive;
     color: white;
     text-align: center;
@@ -62,17 +62,17 @@ h1{
 
 /* styling play button */
 
-.play-button h2{
-   font-size: 5vh;
-   font-family: 'Keania One', sans-serif;
-   color: white;
+.play-button h2 {
+    font-size: 5vh;
+    font-family: 'Keania One', sans-serif;
+    color: white;
 }
 
-.play-button img{
+.play-button img {
     width: 11vh;
 }
 
-.play-button{
+.play-button {
     display: flex;
     background-color: hsla(137, 86%, 47%, 1);
     width: 25vh;
@@ -83,14 +83,188 @@ h1{
     margin: auto;
 }
 
-.play-button:hover{
+.play-button:hover {
     background-color: hsl(137, 61%, 50%);
     cursor: pointer;
 }
 
+/* styliing instrusctions and sound button */
+.instructionsnSound img {
+    width: 8vh;
+    margin: 1vh;
+}
+
+.instructionsnSound {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 90vw;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+#scroll:hover {
+    cursor: pointer;
+}
+#speaker:hover {
+    cursor: pointer;
+}
+
+/* styling pop-up */
+
+.popup1, .popup2, .popup3 {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 33vw;
+    padding: 2vh 3vh;
+    background: hsl(310, 35%, 55%);
+    box-shadow: 0.2vh 0.2vh 0.5vh 0.5vh rgba(0, 0, 0, 0.15);
+    border-radius: 1vh;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+    font-family: 'Keania One', sans-serif;
+    text-align: center;
+    font-size: 4vh;
+}
+
+.popup1.active , .popup3.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+}
+
+.popup2.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+}
+
+.popup1 .close-btn, .popup3 .close-btn {
+    cursor: pointer;
+}
+
+.popup2 .close-btn {
+    cursor: pointer;
+}
+
+
+.popup1 .close-btn img, .popup3 .close-btn img {
+    width: 6vh;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+.popup2 .close-btn img {
+    width: 6vh;
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+.play-options {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-bottom: 4vh;
+}
+
+.option {
+    background-color: white;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    margin: 1vh;
+    border-radius: 2vh;
+    border: 0.5vh solid white;
+}
+
+.option:hover {
+    background-color: rgb(206, 193, 176);
+    cursor: pointer;
+}
+
+.next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(137, 86%, 47%);
+    width: 150px;
+    height: 60px;
+    /* margin: 10px auto; */
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.next-button p {
+    font-size: 30px;
+    font-family: 'Keania One', sans-serif;
+    color: white;
+}
+
+.next-button:hover {
+    background-color: hsl(137, 61%, 50%);
+}
+
+.next-button img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.nxt_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name-input {
+    height: 12vh;
+    margin-bottom: 30px;
+}
+
+.name-input input{
+    height: 100%;
+    width: 80%;
+    font-size: 30px;
+    font-family: 'Keania One', sans-serif;
+}
+
+.name-input input::placeholder{
+    font-size: 30px;
+    font-family: 'Keania One', sans-serif;
+}
+
+
+
 /* media query for mobile screen */
-@media screen and (max-width: 480px){
-    h1{
+@media screen and (max-width: 480px) {
+    h1 {
         padding-top: 15vh;
+        font-size: 10vh;
+    }
+
+    .popup1, .popup2, .popup3 {
+        width: 300px;
+    }
+
+
+
+    .instructionsnSound {
+        margin-top: 15vh;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .instructionsnSound img {
+        margin: 20px;
     }
 }

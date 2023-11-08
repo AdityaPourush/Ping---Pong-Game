@@ -41,6 +41,19 @@ document.addEventListener('mousemove', e => {
     pPaddle.position = (e.y / window.innerHeight)*100; // setting the position of the player paddle to the y value of the mouse event
 })
 
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowUp") {
+    // console.log("up pressed");
+    pPaddle.position -= 10;
+    pPaddle.position = Math.max(pPaddle.position, 0);
+  } else if (e.key === "ArrowDown") {
+    pPaddle.position += 10;
+    pPaddle.position = Math.min(pPaddle.position, 100);
+  }
+});
+
+
 function lost() {
     let outBound = ball.reflect();
     return outBound.right >= window.innerWidth || outBound.left <= 0
@@ -63,3 +76,7 @@ function after_lost() {
 }
 
 window.requestAnimationFrame(update); // calling the update function everytime the browser is ready to get the next frame
+
+let user = document.querySelector("#username")
+let username = localStorage.getItem("username")
+user.textContent = username;

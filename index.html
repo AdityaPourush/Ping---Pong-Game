@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ping-Pong: Play and Enjoy</title>
-    <link rel="stylesheet" href="style1.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ping-Pong: Play and Enjoy</title>
+  <link rel="stylesheet" href="style1.css" />
 </head>
+
 <body>
-    <h1>Ping-Pong !</h1>
-    <div class="play-button">
-        <h2>Play</h2>
-        <img src="https://img.icons8.com/arcade/64/play-button-circled.png" alt="">
+  <h1>Ping-Pong !</h1>
+  <div class="play-button">
+    <h2>Play</h2>
+    <img src="https://img.icons8.com/arcade/64/play-button-circled.png" alt="" />
+  </div>
+  <div class="instructionsnSound">
+    <img src="https://img.icons8.com/3d-fluency/94/scroll.png" alt="" id="scroll"/>
+    <img src="https://img.icons8.com/arcade/64/room-sound.png" alt="" id = "speaker"/>
+  </div>
+  <div class="popup1">
+    <div class="close-btn"><img src="./assets/icons8-x-100.png" alt=""></div>
+    <div class="form">
+      <h2>
+        Which Mode <br />
+        Would You Like To Play?
+      </h2>
+      <div class="play-options">
+        <div class="option" id="option1">With AI</div>
+        <div class="option" id="option2">Multi Player</div>
+        <div class="option" id="option3">Block Breaker</div>
+      </div>
+      <div class="nxt_container">
+        <div class="next-button" id="next-button1">
+          <p>Next</p>
+          <img src="./assets/icons8-arrow-64.png" alt="" />
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="popup2">
+    <div class="close-btn"><img src="./assets/icons8-x-100.png" alt=""></div>
+    <div class="form">
+      <p>Just one more step, before you start: </p>
+      <h2>Please Enter Your Nick-Name</h2>
+    </div>
+    <div class="name-input">
+      <input type="text" id="name" placeholder="Nick-Name" required>
+    </div>
+    <div class="nxt_container">
+      <div class="next-button" id="next-button2">
+        <p>Next</p>
+        <img src="./assets/icons8-arrow-64.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="popup3">
+    <div class="close-btn"><img src="./assets/icons8-x-100.png" alt=""></div>
+    <div class="form">
+      <p>Just one more step, before you start: </p>
+      <h2>Please Enter Your Nick-Name</h2>
+    </div>
+    <div class="name-input">
+      <input type="text" id="name-1" placeholder="Nick-Name" required>
+      <input type="text" id="name-2" placeholder="Nick-Name" required>
+    </div>
+    <div class="nxt_container">
+      <div class="next-button" id="next-button3">
+        <p>Next</p>
+        <img src="./assets/icons8-arrow-64.png" alt="" />
+      </div>
+    </div>
+  </div>
 </body>
 <script src="./script1.js"></script>
+
 </html>

@@ -26,4 +26,4 @@ export default class Paddle {
     }
 }
 
-let speed_cPaddle = 0.025;
+let speed_cPaddle = 0.020;

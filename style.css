@@ -57,8 +57,8 @@ body{
 }
 
 .score > * {  /* to select all direct children of score */
-    flex-grow: 1;
-    flex-basis: 0;
+    /* flex-grow: 1;
+    flex-basis: 0; */
     padding: 0 2vh;
     margin: 1vh 0;
     opacity: 0.5; /* to make it less visible than the main game-play */
@@ -67,4 +67,13 @@ body{
 .score > :first-child{
     text-align: right;
     border-right: 0.5vh solid var(--foreground-color);
+}
+
+.player-1, .player-2 {
+    display: flex;
+}
+
+.player-1 span, .player-2 span{
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
