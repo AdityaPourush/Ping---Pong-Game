@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Keania+One&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./assets/win-trophy.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.show-score {
+    background: rgba(255, 255, 255, 0.53);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.show-score {
+    text-align: center;
+    margin: auto;
+    width: 70vw;
+    margin-top: 20vh;
+}
+
+.show-score h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(56, 6, 16);
+    font-size: 4vw;
+}
+
+#player-name {
+    font-family: 'Keania one', sans-serif;
+    font-size: 3vw;
+}
+
+.end-bottom {
+    display: flex;
+    justify-content: center;
+    justify-content:space-evenly;
+}
+
+#play-again, #home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(137, 86%, 47%);
+    width: 150px;
+    height: 60px;
+    margin: 10px auto;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#play-again p, #home p {
+    font-size: 30px;
+    font-family: 'Keania One', sans-serif;
+    color: white;
+}
+
+.show-score h2 {
+    color: rgb(0, 4, 255);
+}
+
+.score p {
+    font-family: 'Keania one', sans-serif;
+    font-size: 2.5vw;
+}
+
+@media screen and (max-width: 480px) {
+    .show-score{
+        width: 250px;
+    }
+
+    #player-name {
+        font-size: 5vh;
+    }
+
+    .show-score h1 {
+        font-size: 7vh;
+    }
+
+    .score p {
+        font-size: 4vh;
+    }
+}

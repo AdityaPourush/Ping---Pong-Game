@@ -141,3 +141,18 @@ scroll.addEventListener("click", () => {
   window.location.href = "/instruction.html"
 })
 
+let speaker = document.getElementById("speaker");
+
+speaker.addEventListener("click", () => {
+  if(gameAudio.paused){
+    gameAudio.play();
+  } else {
+    gameAudio.pause(); 
+  }
+});
+
+let gameAudio = new Audio("./assets/password-infinity-123276.mp3")
+window.onload = () => {
+  gameAudio.play();
+  gameAudio.volume = 0.2;
+}

@@ -32,6 +32,10 @@ function update(time) {  // creating update function that takes in time as a par
             after_lost();
         }
     }
+
+    if(parseInt(playerScore.innerHTML) >= 10 || parseInt(computerScore.innerHTML) >= 10) {
+        window.location.href = "end-1.html"
+    }
     // console.log(time);
     lastTime = time; // setting the last time to the current time
     window.requestAnimationFrame(update);
@@ -64,11 +68,14 @@ function after_lost() {
     let ball_position = ball.reflect();
     if(ball_position.right >= window.innerWidth){
         playerScore.innerHTML = parseInt(playerScore.innerHTML) + 1
-        console.log();
+        // console.log();
+        localStorage.setItem("player-1-score", playerScore.innerHTML);
     } else if (ball_position.left <= 0){
     // } else {
         computerScore.innerHTML = parseInt(computerScore.innerHTML) + 1   
-        console.log(computerScore.innerHTML);
+        // console.log(computerScore.innerHTML);
+        localStorage.setItem("player-2-score", computerScore.innerHTML);
+
         // could have done it in two steps, like making another variable and then putting it inside the textcontent but learned this, hence using it...
     }
     ball.reset()
@@ -80,3 +87,9 @@ window.requestAnimationFrame(update); // calling the update function everytime t
 let user = document.querySelector("#username")
 let username = localStorage.getItem("username")
 user.textContent = username;
+
+let gameAudio = new Audio("./assets/password-infinity-123276.mp3")
+window.onload = () => {
+  gameAudio.play();
+  gameAudio.volume = 0.2;
+}

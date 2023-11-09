@@ -57,7 +57,7 @@ export default class Ball {
   update(delta, paddleArea) {
     this.x += this.direction.x * initialVelocity * delta;
     this.y += this.direction.y * initialVelocity * delta;
-    this.velocity += 0.005 * delta;
+    this.velocity += 0.5 * delta;
     let reflect = this.reflect();
 
     if (reflect.bottom >= window.innerHeight || reflect.top <= 0) {

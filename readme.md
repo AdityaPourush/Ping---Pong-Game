@@ -9,3 +9,7 @@ During this project, I learned a lot of things about the web development, especi
 
 ..How new keyword works in javaScript - Each call to new MyClass() will create a new distinct instance The instances will all have the properties and methods defined on MyClass.prototype, but their own distinct copies of any properties set in the constructor.
 
+
+link to my game ---> https://adityapourush.github.io/Ping---Pong-Game/
+link to git repo ---> https://github.com/AdityaPourush/Ping---Pong-Game.git
+
