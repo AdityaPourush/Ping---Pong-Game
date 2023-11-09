@@ -1,3 +1,5 @@
+If the Deployed Links doesn't work kindly go to this link to this link : - https://ping-pong-game.adityapourush11.repl.co/
+
 During this project, I learned a lot of things about the web development, especially javaScript. I am mentioning some of the things I learned here:
 
 ..::befor and :: after allow inserting decorative content around elements for styling purposes without modifying the DOM. They are pseudo-elements, meaning they are treated like elements in CSS but are not actual elements. The content property is required, even if blank, to make the pseudo-elements render.
